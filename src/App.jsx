@@ -26,7 +26,7 @@ function randomRotations() {
   for (let y = 0; y < 4; y++) {
     let row = [];
     for (let x = 0; x < 3; x++) {
-      row.push(Math.floor(Math.random() * 4));
+      row.push(1 + Math.floor(Math.random() * 3));
     }
     rows.push(row);
   }

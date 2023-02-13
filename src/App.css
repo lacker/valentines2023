@@ -5,7 +5,8 @@
   text-align: center;
 }
 
-.flex-container {
+.row {
+  height: 25%;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -17,6 +18,14 @@
   -webkit-flex-flow: row;
   flex-flow: row;
   justify-content: space-around;
+}
 
-  line-height: 30px;
+.grid {
+  aspect-ratio: 3/4;
+  height: 90vh;
+}
+
+.piece {
+  aspect-ratio: 1/1;
+  height: 100%;
 }

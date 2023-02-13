@@ -7,11 +7,8 @@ import './App.css'
 // x goes 0 to 2, y goes 0 to 3.
 // rotation is 0 to 3.
 function Piece({ x, y, url, rotation, onClick }) {
-  let tileSize = 300;
   return (
-    <div style={{
-      height: tileSize,
-      width: tileSize,
+    <div className="piece" style={{
       backgroundImage: `url(${url})`,
       backgroundSize: "300% 400%",
       backgroundPosition: `${-x * 100}% ${-y * 100}%`,
@@ -86,9 +83,9 @@ function Board({ urls }) {
       row.push(<Piece x={x} y={y} url={url} rotation={rotations[y][x]}
         key={`piece${x}`} onClick={onClick} />);
     }
-    rows.push(<div key={`row${y}`} className="flex-container" > {row}</div >);
+    rows.push(<div key={`row${y}`} className="row"> {row}</div >);
   }
-  return <div>{rows}</div>;
+  return <div className="grid">{rows}</div>;
 }
 
 function App() {

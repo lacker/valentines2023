@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import zoe1 from './assets/zoe1.jpg'
+import pics from "./Pics"
 import './App.css'
 
 // x counts across, y counts down from the top.
@@ -16,7 +16,7 @@ function Piece({ x, y, url, rotation, onClick }) {
       backgroundSize: "300% 400%",
       backgroundPosition: `${-x * 100}% ${-y * 100}%`,
       transform: `rotate(${rotation * 90}deg)`,
-      transition: "transform 1s linear",
+      transition: "transform 0.2s linear",
     }} onClick={onClick} />
   );
 }
@@ -54,7 +54,7 @@ function Board({ url }) {
 }
 
 function App() {
-  return <Board url={zoe1} />;
+  return <Board url={pics[0]} />;
 }
 
 export default App
